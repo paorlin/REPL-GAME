@@ -1,2 +1,4 @@
 hey pat just read your repo
-THis is the weekend proyect for the first week
+THis is the weekend project for the first week
+
+
