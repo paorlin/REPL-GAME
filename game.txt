@@ -1,0 +1,78 @@
+Menu = ["Menu",
+  "Tacos             $8",
+  "Fajitas           $7",
+  "Quesadillas       $4",
+  "Nachos            $3"]
+Side = [
+  "Water      $2",
+  "Soda       $3",
+  "Fries      $4",
+  "Salsa      $3"
+]
+puts "Hello! Welcome to Taco Bell!"
+puts "My name is Martin, can I take your order?"
+puts Menu
+order = gets.chomp.capitalize
+puts " "
+case order
+  when "Tacos"
+    puts "You will love our meat tacos"
+    puts "Would you like anything else with that?"
+    order = 8
+  when "Fajitas"
+    puts "Our fajitas are the best in town!"
+    puts "Would you like anything else with that?"
+    order = 7
+  when "Quesadillas"
+    puts "Great choice"
+    puts "Would you like anything else with that?"
+    order = 4
+  when "Nachos"
+    puts "They are great for sharing"
+    puts "Would you like anything else with that?"
+    order = 3
+  else
+    puts "I'm sorry, we don't have that, may I offer you something else?"
+    order = 0
+end
+puts " "
+puts Side
+order1 = gets.chomp.capitalize
+case order1
+  when "Water"
+    puts "One bottled water coming up"
+    order1 = 2
+  when "Soda"
+    puts "We only have Coke at the moment"
+    order1 = 3
+  when "Fries"
+    puts "Extra crunchy, extra salty, extra flavour"
+    order1 = 4
+  when "Salsa"
+    puts "Best dip in town"
+    order1 = 3
+  else
+    puts "We don't have that at the moment. Please proceed to pay"
+    order1 = 0
+end
+total = order1 + order
+puts "The total will be $#{total}"
+puts "Cash or Credit?"
+pay = gets.chomp.capitalize
+
+while pay != "Cash" && pay != "Credit"
+  puts "We dont accept that method of payment"
+  pay = gets.chomp.capitalize
+end
+
+if pay == "Cash"
+  puts "We are very sorry, but we dont have change at the moment"
+  puts "Please insert your card at the bottom of the machine"
+  puts "Don't forget your receipt"
+else
+  puts "Please insert your card at the bottom of the machine"
+  puts "Don't forget your receipt"
+end
+
+puts "Thank you for your purchase, please come back soon!"
+
